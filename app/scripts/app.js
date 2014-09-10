@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var users = [];
+    users = [];
     $('#btnSave').on('click', function(){
         var txtName = $('#txtName'),
         txtCity = $('#txtCity'),
@@ -30,7 +30,7 @@ $(document).ready(function(){
         users.push(usr);        
     };
     
-    var refreshGrid = function(){
+    refreshGrid = function(){
         $('#userGrid').empty();
         if(users.length === 0){
         return;
@@ -41,7 +41,7 @@ $(document).ready(function(){
         createGrid();
     };
     
-    var createGrid = function(){
+    createGrid = function(){
         var grid = $('<div/>');
         
         for(var i=0, len = users.length; i<len; i++){
@@ -74,11 +74,11 @@ $(document).ready(function(){
     });
     
     var removeUser = function(id){
-        var i=0;
+        
         if(users.length === 0)            
             return;
         for(var i=0, len = users.length; i<len; i++){
-            if(users[i].index === id)
+            if(users[i].index == id)
                 break;
         }
         users.splice(i,1);
